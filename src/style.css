@@ -1,0 +1,156 @@
+/* styles.css */
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Medium.otf') format('opentype');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-ExtraBold.otf') format('opentype');
+    font-weight: 800; /* Extra Bold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Chado';
+    src: url('/fonts/ChaDo-Medium.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-customOrange font-medium font-chado;
+    }
+
+    .input-card {
+        @apply flex flex-col items-center justify-center p-4 border border-gray-300 hover:border-customBlack rounded-[10px] cursor-pointer transition-colors duration-200;
+    }
+
+    .primary-button {
+        @apply px-8 py-2 bg-[#67b9f3] text-[#232323] rounded-md hover:text-[#e6e6e6] transition duration-300 ease-in-out flex items-center;
+    }
+
+    .secondary-button {
+        @apply px-8 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition duration-300 ease-in-out flex items-center;
+    }
+}
+
+.bg-orangeLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-20deg);
+    transform-origin: top left;
+    margin-top: 12%;
+    margin-left: 0.1%;
+    width: 40%;
+    height: auto;
+    z-index: 0;
+}
+
+.bg-blackLine {
+    position: absolute;
+    bottom: 0;
+    right: -9%;
+    transform: rotate(-40deg);
+    margin-bottom: 6rem;
+    width: 50%;
+    height: auto;
+    z-index: 0;
+}
+
+.bg-grayLine {
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transform: rotate(-30deg);
+    margin-bottom: 0;
+    width: 40%;
+    height: auto;
+    z-index: 0;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+@media (max-width: 640px) { /* Small devices (sm) */
+    .bg-blackLine {
+        width: 80%;
+        margin-right: -5%;
+        margin-bottom: 10%;
+    }
+
+    .bg-orangeLine {
+        width: 100%;
+        margin-top: 30%;
+        margin-left: -20%;
+    }
+
+    .bg-grayLine {
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) { /* Medium devices (md) */
+    .bg-blackLine {
+        width: 80%;
+        margin-top: 2%;
+        margin-right: -5%;
+    }
+
+    .bg-orangeLine {
+        width: 100%;
+        margin-top: 7%;
+        margin-left: -10%;
+    }
+
+    .bg-grayLine {
+        margin-bottom: 0;
+        width: 80%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) { /* Large devices (lg) */
+    .bg-blackLine {
+        width: 70%;
+        margin-right: -5%;
+    }
+
+    .bg-orangeLine {
+        width: 80%;
+        margin-top: 15%;
+        margin-left: 0;
+    }
+
+    .bg-grayLine {
+        width: 60%;
+    }
+}
